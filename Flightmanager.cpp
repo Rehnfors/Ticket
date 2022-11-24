@@ -1,3 +1,14 @@
+/**
+ * @file Flightmanager.cpp
+ * @author Jesper Rehnfors (jesper.rehnfors@studerande.movant.se)
+ * @brief A program which produces tickets from a file of bookings and a file of flights.
+ * @version 0.1
+ * @date 2022-11-24
+ *
+ * @copyright Copyright (c) 2022
+ *
+ */
+
 #include <iostream>
 #include <iterator>
 #include <list>
@@ -7,6 +18,9 @@
 
 using namespace std;
 
+/**
+ * @brief Flight class, storing variables for flights
+ */
 class Flight
 {
 private:
@@ -38,7 +52,7 @@ public:
     void set_time(string time) { this->time = time; }
 
     void set_nfs(int nfs) { this->nfs = nfs * 7; } // set number of first class seats
-    void increase_bfs() { this->bfs = bfs + 1; } // increase booked first class seats
+    void increase_bfs() { this->bfs = bfs + 1; }   // increase booked first class seats
 
     void set_nbs(int nbs) { this->nbs = nbs * 7; }
     void increase_bbs() { this->bbs = bbs + 1; }
@@ -60,6 +74,9 @@ public:
     int get_bes() { return this->bes; }
 };
 
+/**
+ * @brief Booking class, storing variables for bookings.
+ */
 class Booking
 {
 private:
@@ -93,7 +110,10 @@ public:
     string get_fName() { return this->fName; }
     string get_lName() { return this->lName; }
 };
-
+/**
+ * @brief FlightManager reads flights from a file and stores each line of the file
+ * in a list, as a flight.
+ */
 class FlightManager
 {
 private:
@@ -134,7 +154,11 @@ public:
         }
         file.close();
     }
-
+    /**
+     * @brief show_flights iterates through the "Flights"-list and prints each flightnumber from it.
+     * For testing purposes.
+     * @param Flights 
+     */
     void show_flights(list<Flight *> Flights)
     {
         list<Flight *>::iterator f;
@@ -145,12 +169,21 @@ public:
         }
     }
 
+    /**
+     * @brief Get the flights object
+     * 
+     * @return list<Flight *> 
+     */
     list<Flight *> get_flights()
     {
         return Flights;
     }
 };
 
+/**
+ * @brief BookingManager reads a file of bookings and stores each line as a booking.
+ * 
+ */
 class BookingManager
 {
 private:
@@ -191,7 +224,11 @@ public:
         }
         file.close();
     }
-
+    /**
+     * @brief show_booking iterates through the list of bookings and prints the Booking number from each booking.
+     * For testing purposes.
+     * @param Bookings 
+     */
     void show_bookings(list<Booking *> Bookings)
     {
         list<Booking *>::iterator b;
@@ -201,12 +238,21 @@ public:
             cout << "BookingNo: " << (*b)->get_bookingNo() << endl;
         }
     }
-
+    /**
+     * @brief Get the bookings object
+     * @return list<Booking *> 
+     */
     list<Booking *> get_bookings()
     {
         return Bookings;
     }
 };
+
+/**
+ * @brief TicketManager iterates through the Flights list and the Bookings list.
+ * It compares the information these files have in common, and if they match, a booking is made.
+ * The booking will then be printed to a ticket.
+ */
 
 class TicketManager
 {
