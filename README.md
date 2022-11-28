@@ -1,3 +1,3 @@
 # Ticket
 
-Programmet körs genom att skriva ./flightmanager
+Launch the program by typing ./flightmanager
