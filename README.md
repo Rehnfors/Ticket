@@ -6,3 +6,5 @@ The program reads through these files, and if it finds a matching booking for a 
 If a plane is left empty, it will be cancelled. The flightnumber of the cancelled flight will be printed in a report.
 
 Launch the program by typing ./flightmanager flights.csv bookings.csv
+
+(I added a makefile but im not sure i did it correctly..)
