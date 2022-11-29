@@ -10,6 +10,7 @@
         "string_view": "cpp",
         "initializer_list": "cpp",
         "cstdlib": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "ostream": "cpp"
     }
 }

@@ -12,17 +12,29 @@
 
 using namespace std;
 
-
 int main(int argc, char const *argv[])
 {
-    BookingManager bej;
-    bej.read_bookings("bookings.csv");
+    try
+    {
+        if (argc!=3)
+        {
+            throw "./Ticketmanager (flightfile) (bookingsfile)";
+        }
+        FlightManager Flight;
+        Flight.read_flights(argv[1]);
 
-    FlightManager hej;
-    hej.read_flights("flights.csv");
+        BookingManager Booking;
+        Booking.read_bookings(argv[2]);
 
-    TicketManager ticket;
-    ticket.get_seat(hej.get_flights(), bej.get_bookings());
-    
+        TicketManager ticket;
+        ticket.get_seat(Flight.get_flights(), Booking.get_bookings());
+
+        return 0;
+    }
+    catch (...)
+    {
+        cerr << "./Ticketmanager (flightfile) (bookingsfile)" << endl;
+    }
+
     return 0;
 }
