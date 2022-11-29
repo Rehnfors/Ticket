@@ -28,6 +28,7 @@ int main(int argc, char const *argv[])
 
         TicketManager ticket;
         ticket.get_seat(Flight.get_flights(), Booking.get_bookings());
+        ticket.cancelled_flights(Flight.get_flights());
 
         return 0;
     }

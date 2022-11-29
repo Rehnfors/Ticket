@@ -18,7 +18,7 @@ public:
     TicketManager();
     list<Flight *>::iterator f;
     list<Booking *>::iterator b;
-
+    void cancelled_flights(list<Flight *> Flights);
     void get_seat(list<Flight *> Flights, list<Booking *> Bookings);
 };
 
