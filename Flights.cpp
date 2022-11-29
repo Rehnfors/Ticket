@@ -3,6 +3,9 @@
 
 using namespace std;
 
+/**
+ * @brief Flight class, storing variables for flights
+ */
 Flight::Flight()
 {
     // Setting booked seats to 0

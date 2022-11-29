@@ -4,6 +4,11 @@
 
 using namespace std;
 
+/**
+ * @brief FlightManager reads flights from a file and stores each line of the file
+ * in a list, as a flight.
+ */
+
 FlightManager::FlightManager() {}
 
 void FlightManager::read_flights(string filename)

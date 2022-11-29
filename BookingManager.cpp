@@ -4,6 +4,11 @@
 
 using namespace std;
 
+/**
+ * @brief BookingManager reads a file of bookings and stores each line as a booking.
+ *
+ */
+
 BookingManager::BookingManager() {}
 
 void BookingManager::read_bookings(string filename)

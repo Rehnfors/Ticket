@@ -3,6 +3,10 @@
 
 using namespace std;
 
+/**
+ * @brief Booking class, storing variables for bookings.
+ */
+
 // Booking setters
 void Booking::set_bookingNo(int bookingNo) { this->bookingNo = bookingNo; }
 void Booking::set_date(string date) { this->date = date; }
