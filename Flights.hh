@@ -1,11 +1,5 @@
 #ifndef FLIGHTS_HH
 #define FLIGHTS_HH
-#include <iostream>
-#include <iterator>
-#include <list>
-#include <fstream>
-#include <sstream>
-#include <string>
 
 using namespace std;
 class Flight

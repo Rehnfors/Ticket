@@ -1,10 +1,4 @@
 #include <iostream>
-#include <iterator>
-#include <cstdlib>
-#include <list>
-#include <fstream>
-#include <sstream>
-#include <string>
 #include "Flights.hh"
 
 using namespace std;

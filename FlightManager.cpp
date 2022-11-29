@@ -1,9 +1,4 @@
 #include <iostream>
-#include <iterator>
-#include <list>
-#include <fstream>
-#include <sstream>
-#include <string>
 #include "FlightManager.hh"
 #include "Flights.hh"
 
